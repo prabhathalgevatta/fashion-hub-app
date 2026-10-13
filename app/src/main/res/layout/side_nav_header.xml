@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/app_surface"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="36dp"
+    android:paddingBottom="18dp">
+
+    <!-- Luxury Brand Kicker -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/bg_circle_icon"
+            android:backgroundTint="@color/brand_primary"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VELLORA LUXURY"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:textColor="@color/brand_primary" />
+    </LinearLayout>
+
+    <!-- Profile Avatar with Amber Accent Ring -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        app:cardCornerRadius="34dp"
+        app:cardBackgroundColor="@color/app_card"
+        app:strokeColor="@color/brand_primary"
+        app:strokeWidth="2dp"
+        app:cardElevation="2dp">
+
+        <ImageView
+            android:id="@+id/nav_header_profile_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/nav_header_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="FashionHub Member"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary" />
+
+    <!-- User Email -->
+    <TextView
+        android:id="@+id/nav_header_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="customer@fashionhub.com"
+        android:textSize="13sp"
+        android:textColor="@color/text_muted"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- VIP / Member Badge Pill -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_badge_pill_amber">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✦ VIP PRIVILEGE ACCESS"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:textColor="@color/brand_primary" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/app_stroke" />
+
+</LinearLayout>

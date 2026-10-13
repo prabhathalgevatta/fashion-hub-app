@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:fitsSystemWindows="true">
+
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_wishlist"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_bg"
+        app:title="My Wishlist"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        app:titleTextColor="@color/text_primary"
+        app:navigationIcon="@drawable/ic_chevron_left_24"
+        app:navigationIconTint="@color/text_primary" />
+
+    <!-- Wishlist Recycler -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_wishlist_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_wishlist"
+        android:paddingTop="8dp"
+        android:paddingBottom="24dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_wishlist" />
+
+    <!-- Luxury Empty State Container -->
+    <LinearLayout
+        android:id="@+id/layout_empty_wishlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_wishlist"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/bg_circle_icon">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:src="@drawable/favorite_24px"
+                app:tint="@color/brand_primary" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_empty_wishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Your Wishlist is Empty"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Explore our latest luxury collections\nand save your favorite styles."
+            android:textColor="@color/text_muted"
+            android:textSize="13sp"
+            android:lineSpacingExtra="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_empty_wishlist_explore"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:text="Explore Collection"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="32dp"
+            android:background="@drawable/bg_button_get_started"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warm Luxury Theme Colors from Vellora Mockups -->
+    <color name="app_bg">#F7F2E7</color>
+    <color name="app_surface">#FFFFFF</color>
+    <color name="app_surface_variant">#EFE8DC</color>
+    <color name="app_card">#ECE5D8</color>
+    <color name="app_card_glow">#E5DDCF</color>
+    <color name="app_stroke">#E2DCD0</color>
+    <color name="app_stroke_glow">#D9D1C3</color>
+
+    <color name="dock_bg">#F7F2E7</color>
+    <color name="dock_stroke">#E2DCD0</color>
+
+    <!-- Minimalist Capsule Navigation Colors -->
+    <color name="capsule_dock_bg">#FFFFFF</color>
+    <color name="nav_circle_active_bg">#BA770C</color>
+    <color name="nav_circle_inactive_bg">#FFFFFF</color>
+    <color name="nav_icon_active">#FFFFFF</color>
+    <color name="nav_icon_inactive">#111111</color>
+    <color name="search_bg">#FFFFFF</color>
+    <color name="circle_btn_bg">#FFFFFF</color>
+    <color name="circle_btn_stroke">#E2DCD0</color>
+    <color name="category_inactive_bg">#FFFFFF</color>
+    <color name="category_inactive_stroke">#E2DCD0</color>
+    <color name="category_inactive_text">#3E3932</color>
+
+    <!-- Warm Amber / Mustard Brand Accent from Mockup -->
+    <color name="neon_pink">#BA770C</color>
+    <color name="neon_purple">#BA770C</color>
+    <color name="neon_purple_dark">#9C6105</color>
+    <color name="neon_violet">#BA770C</color>
+    <color name="neon_cyan">#06B6D4</color>
+    <color name="neon_gradient_start">#BA770C</color>
+    <color name="neon_gradient_center">#C47C10</color>
+    <color name="neon_gradient_end">#9C6105</color>
+    <color name="brand_primary">#BA770C</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1C1917</color>
+    <color name="text_secondary">#57524A</color>
+    <color name="text_muted">#8C857B</color>
+    <color name="accent_green">#10B981</color>
+    <color name="accent_gold">#BA770C</color>
+
+    <!-- Material Design 3 Mapping -->
+    <color name="md_theme_primary">#7C3AED</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#EDE9FE</color>
+    <color name="md_theme_onPrimaryContainer">#3B185F</color>
+    <color name="md_theme_secondary">#EC4899</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#FCE7F3</color>
+    <color name="md_theme_onSecondaryContainer">#4A1231</color>
+    <color name="md_theme_tertiary">#06B6D4</color>
+    <color name="md_theme_onTertiary">#FFFFFF</color>
+    <color name="md_theme_tertiaryContainer">#CFFAFE</color>
+    <color name="md_theme_onTertiaryContainer">#083344</color>
+    <color name="md_theme_error">#EF4444</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_errorContainer">#FEE2E2</color>
+    <color name="md_theme_onErrorContainer">#450A0A</color>
+    <color name="md_theme_background">#F4F6F9</color>
+    <color name="md_theme_onBackground">#0F172A</color>
+    <color name="md_theme_surface">#FFFFFF</color>
+    <color name="md_theme_onSurface">#0F172A</color>
+    <color name="md_theme_surfaceVariant">#EBEFF5</color>
+    <color name="md_theme_onSurfaceVariant">#475569</color>
+    <color name="md_theme_outline">#CBD5E1</color>
+    <color name="md_theme_outlineVariant">#E2E8F0</color>
+    <color name="md_theme_scrim">#000000</color>
+    <color name="md_theme_inverseSurface">#1E293B</color>
+    <color name="md_theme_inverseOnSurface">#F8FAFC</color>
+    <color name="md_theme_inversePrimary">#C4B5FD</color>
+    <color name="md_theme_primaryFixed">#7C3AED</color>
+    <color name="md_theme_onPrimaryFixed">#FFFFFF</color>
+    <color name="md_theme_primaryFixedDim">#6D28D9</color>
+    <color name="md_theme_onPrimaryFixedVariant">#EDE9FE</color>
+    <color name="md_theme_secondaryFixed">#EC4899</color>
+    <color name="md_theme_onSecondaryFixed">#FFFFFF</color>
+    <color name="md_theme_secondaryFixedDim">#DB2777</color>
+    <color name="md_theme_onSecondaryFixedVariant">#FCE7F3</color>
+    <color name="md_theme_tertiaryFixed">#06B6D4</color>
+    <color name="md_theme_onTertiaryFixed">#FFFFFF</color>
+    <color name="md_theme_tertiaryFixedDim">#0891B2</color>
+    <color name="md_theme_onTertiaryFixedVariant">#CFFAFE</color>
+    <color name="md_theme_surfaceDim">#E2E8F0</color>
+    <color name="md_theme_surfaceBright">#FFFFFF</color>
+    <color name="md_theme_surfaceContainerLowest">#FFFFFF</color>
+    <color name="md_theme_surfaceContainerLow">#F8FAFC</color>
+    <color name="md_theme_surfaceContainer">#F1F5F9</color>
+    <color name="md_theme_surfaceContainerHigh">#E2E8F0</color>
+    <color name="md_theme_surfaceContainerHighest">#CBD5E1</color>
+</resources>

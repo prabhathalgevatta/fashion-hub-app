@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_popup_rounded">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter &amp; Sort"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort By"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold" 
+        android:textSize="16sp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp">
+        <RadioGroup
+            android:id="@+id/rg_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <RadioButton
+                android:id="@+id/rb_sort_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Arrivals"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="12dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_sort_low_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lowest Price"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="12dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_sort_high_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Highest Price"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="12dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_sort_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Rated"
+                android:textColor="@color/text_secondary"/>
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold" 
+        android:textSize="16sp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp">
+        <RadioGroup
+            android:id="@+id/rg_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <RadioButton
+                android:id="@+id/rb_cat_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="12dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_cat_men"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Men"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="12dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_cat_women"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Women"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="12dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_cat_kids"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kids"
+                android:textColor="@color/text_secondary"/>
+        </RadioGroup>
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price Range (Rs.)"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold" 
+        android:textSize="16sp"/>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/rs_price_range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="0.0"
+        android:valueTo="20000.0"
+        android:stepSize="100.0"
+        app:thumbTint="@color/neon_violet"
+        app:trackColorActive="@color/neon_violet"
+        app:trackColorInactive="@color/app_stroke"
+        app:tickVisible="false"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp" />
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+        
+        <TextView
+            android:id="@+id/tv_min_price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs. 0"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"/>
+            
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+            
+        <TextView
+            android:id="@+id/tv_max_price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs. 20000"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reset_filter"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="54dp"
+            android:text="RESET"
+            android:textColor="@color/text_primary"
+            app:strokeColor="@color/app_stroke"
+            app:cornerRadius="12dp"
+            android:layout_marginEnd="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_apply_filter"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="54dp"
+            android:text="APPLY"
+            android:textColor="@color/white"
+            app:cornerRadius="12dp"
+            android:backgroundTint="@color/neon_violet"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+</LinearLayout>

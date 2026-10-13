@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:fitsSystemWindows="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_action_bar"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Hero Image Container Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/app_surface"
+                app:strokeColor="@color/app_stroke"
+                app:strokeWidth="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                                        <!-- Product Image Slider -->
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/detail_image_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <!-- Dots Indicator -->
+                    <LinearLayout
+                        android:id="@+id/image_dots_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:gravity="center" />
+
+                    <!-- Top-Left Circular Back Button -->
+                    <ImageView
+                        android:id="@+id/btn_back"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="14dp"
+                        android:background="@drawable/bg_circle_icon"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_chevron_left_24"
+                        app:tint="@color/text_primary"
+                        android:contentDescription="Back" />
+
+                    <!-- Top-Right Actions (Share & Wishlist & Cart) -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="14dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <!-- Share Button -->
+                        <ImageView
+                            android:id="@+id/btn_share"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:background="@drawable/bg_circle_icon"
+                            android:padding="11dp"
+                            android:src="@android:drawable/ic_menu_share"
+                            app:tint="@color/text_primary"
+                            android:contentDescription="Share" />
+
+                        <!-- Wishlist Heart Button -->
+                        <ImageView
+                            android:id="@+id/btn_favorite"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_circle_icon"
+                            android:padding="10dp"
+                            android:src="@drawable/favorite_24px"
+                            app:tint="#9E9E9E"
+                            android:contentDescription="Wishlist" />
+
+                        <!-- Shopping Cart Button -->
+                        <ImageView
+                            android:id="@+id/btn_cart_top"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_circle_icon"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_shopping_bag_24"
+                            app:tint="@color/text_primary"
+                            android:contentDescription="Cart" />
+                    </LinearLayout>
+
+                    <!-- Subtle Indicator Pill at Bottom Center -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_tracking_pill"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:layout_width="16dp"
+                            android:layout_height="3.5dp"
+                            android:background="@drawable/bg_button_get_started" />
+
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="3.5dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@color/app_stroke" />
+
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="3.5dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@color/app_stroke" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Product Details Section Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/app_surface"
+                app:strokeColor="@color/app_stroke"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Brand Kicker -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VELLORA LUXURY"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.15"
+                        android:textColor="@color/brand_primary" />
+
+                    <!-- Product Name and Price Row -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp">
+
+                        <TextView
+                            android:id="@+id/detail_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@+id/detail_header_price"
+                            android:layout_marginEnd="12dp"
+                            android:text=""
+                            android:textColor="@color/text_primary"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.02" />
+
+                        <TextView
+                            android:id="@+id/detail_header_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/brand_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <!-- Stock Status Pill -->
+                    <TextView
+                        android:id="@+id/tv_stock_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Checking stock..."
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:background="@drawable/bg_badge_out_of_stock"
+                        android:visibility="gone" />
+
+                    <!-- Rating and Reviews Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical">
+
+                        <RatingBar
+                            android:id="@+id/detail_rating_bar"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rating="0.0"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:stepSize="0.5"
+                            android:progressTint="@color/brand_primary" />
+
+                        <TextView
+                            android:id="@+id/detail_review_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text=""
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@color/app_stroke" />
+
+                    <!-- Description Header & Content -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRODUCT DETAILS"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.12"
+                        android:textColor="@color/text_muted" />
+
+                    <TextView
+                        android:id="@+id/detail_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text=""
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:lineSpacingExtra="4dp" />
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@color/app_stroke" />
+
+                    <!-- Size Selector Row -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SELECT SIZE"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.12"
+                            android:textColor="@color/text_muted" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="Size Guide"
+                            android:textColor="@color/brand_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radio_group_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_s"
+                            android:layout_width="54dp"
+                            android:layout_height="42dp"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:background="@drawable/bg_size_pill_selector"
+                            android:text="S"
+                            android:textColor="@color/color_size_pill_text"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="8dp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_m"
+                            android:layout_width="54dp"
+                            android:layout_height="42dp"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:background="@drawable/bg_size_pill_selector"
+                            android:text="M"
+                            android:textColor="@color/color_size_pill_text"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="8dp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_l"
+                            android:layout_width="54dp"
+                            android:layout_height="42dp"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:background="@drawable/bg_size_pill_selector"
+                            android:text="L"
+                            android:textColor="@color/color_size_pill_text"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:checked="true"
+                            android:layout_marginEnd="8dp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_xl"
+                            android:layout_width="54dp"
+                            android:layout_height="42dp"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:background="@drawable/bg_size_pill_selector"
+                            android:text="XL"
+                            android:textColor="@color/color_size_pill_text"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="8dp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_xxl"
+                            android:layout_width="54dp"
+                            android:layout_height="42dp"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:background="@drawable/bg_size_pill_selector"
+                            android:text="XXL"
+                            android:textColor="@color/color_size_pill_text"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@color/app_stroke" />
+
+                    <!-- Color Selector Header & Options -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SELECT COLOR"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.12"
+                            android:textColor="@color/text_muted" />
+
+                        <TextView
+                            android:id="@+id/tv_selected_color_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="Charcoal Black"
+                            android:textColor="@color/brand_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <!-- Color Swatches Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <!-- Swatch 1: Charcoal Black -->
+                        <FrameLayout
+                            android:id="@+id/btn_color_1"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bg_color_ring_active"
+                            android:padding="3.5dp"
+                            android:layout_marginEnd="12dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_color_circle_black" />
+                        </FrameLayout>
+
+                        <!-- Swatch 2: Warm Camel -->
+                        <FrameLayout
+                            android:id="@+id/btn_color_2"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bg_color_ring_inactive"
+                            android:padding="3.5dp"
+                            android:layout_marginEnd="12dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_color_circle_camel" />
+                        </FrameLayout>
+
+                        <!-- Swatch 3: Desert Sand -->
+                        <FrameLayout
+                            android:id="@+id/btn_color_3"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bg_color_ring_inactive"
+                            android:padding="3.5dp"
+                            android:layout_marginEnd="12dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_color_circle_sand" />
+                        </FrameLayout>
+
+                        <!-- Swatch 4: Olive Sage -->
+                        <FrameLayout
+                            android:id="@+id/btn_color_4"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bg_color_ring_inactive"
+                            android:padding="3.5dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_color_circle_sage" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@color/app_stroke" />
+
+                    <!-- Quantity Selector Section -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="QUANTITY"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.12"
+                            android:textColor="@color/text_muted" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="● In Stock"
+                            android:textColor="#059669"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <!-- Quantity Pill Counter -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"
+                        android:background="@drawable/bg_tracking_pill"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="6dp">
+
+                        <!-- Minus Button -->
+                        <ImageView
+                            android:id="@+id/btn_qty_minus"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/bg_circle_icon"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_minus_24"
+                            app:tint="@color/text_primary"
+                            android:contentDescription="Decrease Quantity" />
+
+                        <!-- Qty Display -->
+                        <TextView
+                            android:id="@+id/tv_product_qty"
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!-- Plus Button -->
+                        <ImageView
+                            android:id="@+id/btn_qty_plus"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/bg_circle_icon"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_plus_24"
+                            app:tint="@color/text_primary"
+                            android:contentDescription="Increase Quantity" />
+                    </LinearLayout>
+
+                    <!-- Contact Store Support Pill Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_call_store"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="20dp"
+                        android:text="📞 Inquire Support / Assistance"
+                        android:textColor="@color/brand_primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:strokeColor="@color/brand_primary"
+                        app:cornerRadius="100dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Sticky Action Dock -->
+    <LinearLayout
+        android:id="@+id/bottom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_surface"
+        android:elevation="16dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="14dp"
+        android:gravity="center_vertical">
+
+        <!-- Price Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRICE"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08" />
+
+            <TextView
+                android:id="@+id/detail_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 0.00"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- ADD TO CART Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:text="ADD TO CART"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            app:icon="@drawable/ic_shopping_bag_24"
+            app:iconTint="#FFFFFF"
+            app:iconSize="18dp"
+            app:iconGravity="textStart"
+            android:paddingHorizontal="26dp"
+            android:background="@drawable/bg_button_get_started"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+</RelativeLayout>

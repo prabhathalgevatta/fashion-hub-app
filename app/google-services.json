@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "48950739051",
+    "project_id": "fashionhub-ac54e",
+    "storage_bucket": "fashionhub-ac54e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48950739051:android:a56cc5cfbacde9c688312e",
+        "android_client_info": {
+          "package_name": "lk.prabhath.eshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-1WMOvG91itpmvElK14OhIFsckt5RIao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48950739051:android:32ae9ce1038a078688312e",
+        "android_client_info": {
+          "package_name": "lk.prabhath.fashionhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-1WMOvG91itpmvElK14OhIFsckt5RIao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

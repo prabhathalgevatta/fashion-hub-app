@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Navy & Neon Glow Theme Colors -->
+    <color name="app_bg">#0B0E17</color>
+    <color name="app_surface">#141927</color>
+    <color name="app_surface_variant">#1C2337</color>
+    <color name="app_card">#161C2C</color>
+    <color name="app_card_glow">#1E263C</color>
+    <color name="app_stroke">#28324E</color>
+    <color name="app_stroke_glow">#4C3575</color>
+
+    <color name="dock_bg">#EB13192B</color>
+    <color name="dock_stroke">#405A79A6</color>
+    <color name="search_bg">#161D2E</color>
+    <color name="circle_btn_bg">#731C2438</color>
+    <color name="circle_btn_stroke">#407A8FA6</color>
+    <color name="category_inactive_bg">#161D2E</color>
+    <color name="category_inactive_stroke">#28334A</color>
+    <color name="category_inactive_text">#8E9BAE</color>
+
+    <!-- Neon & Gradient Highlights -->
+    <color name="neon_pink">#FF2D7A</color>
+    <color name="neon_purple">#8B5CF6</color>
+    <color name="neon_purple_dark">#6D28D9</color>
+    <color name="neon_violet">#A855F7</color>
+    <color name="neon_cyan">#06B6D4</color>
+    <color name="neon_gradient_start">#FF2D7A</color>
+    <color name="neon_gradient_center">#A855F7</color>
+    <color name="neon_gradient_end">#6366F1</color>
+
+        <!-- Minimalist Capsule Navigation Colors -->
+    <color name="capsule_dock_bg">#141927</color>
+    <color name="nav_circle_active_bg">#FF2D7A</color>
+    <color name="nav_circle_inactive_bg">#141927</color>
+    <color name="nav_icon_active">#FFFFFF</color>
+    <color name="nav_icon_inactive">#94A3B8</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#64748B</color>
+    <color name="accent_green">#10B981</color>
+    <color name="accent_gold">#F59E0B</color>
+
+    <!-- Material Design 3 Mapping -->
+    <color name="md_theme_primary">#A855F7</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#3B185F</color>
+    <color name="md_theme_onPrimaryContainer">#E9D5FF</color>
+    <color name="md_theme_secondary">#EC4899</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#4A1231</color>
+    <color name="md_theme_onSecondaryContainer">#FCE7F3</color>
+    <color name="md_theme_tertiary">#06B6D4</color>
+    <color name="md_theme_onTertiary">#FFFFFF</color>
+    <color name="md_theme_tertiaryContainer">#083344</color>
+    <color name="md_theme_onTertiaryContainer">#CFFAFE</color>
+    <color name="md_theme_error">#EF4444</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_errorContainer">#450A0A</color>
+    <color name="md_theme_onErrorContainer">#FEE2E2</color>
+    <color name="md_theme_background">#0B0E17</color>
+    <color name="md_theme_onBackground">#FFFFFF</color>
+    <color name="md_theme_surface">#141927</color>
+    <color name="md_theme_onSurface">#FFFFFF</color>
+    <color name="md_theme_surfaceVariant">#1C2337</color>
+    <color name="md_theme_onSurfaceVariant">#94A3B8</color>
+    <color name="md_theme_outline">#28324E</color>
+    <color name="md_theme_outlineVariant">#394569</color>
+    <color name="md_theme_scrim">#000000</color>
+    <color name="md_theme_inverseSurface">#E2E8F0</color>
+    <color name="md_theme_inverseOnSurface">#0F172A</color>
+    <color name="md_theme_inversePrimary">#7C3AED</color>
+    <color name="md_theme_primaryFixed">#A855F7</color>
+    <color name="md_theme_onPrimaryFixed">#FFFFFF</color>
+    <color name="md_theme_primaryFixedDim">#8B5CF6</color>
+    <color name="md_theme_onPrimaryFixedVariant">#E9D5FF</color>
+    <color name="md_theme_secondaryFixed">#EC4899</color>
+    <color name="md_theme_onSecondaryFixed">#FFFFFF</color>
+    <color name="md_theme_secondaryFixedDim">#DB2777</color>
+    <color name="md_theme_onSecondaryFixedVariant">#FCE7F3</color>
+    <color name="md_theme_tertiaryFixed">#06B6D4</color>
+    <color name="md_theme_onTertiaryFixed">#FFFFFF</color>
+    <color name="md_theme_tertiaryFixedDim">#0891B2</color>
+    <color name="md_theme_onTertiaryFixedVariant">#CFFAFE</color>
+    <color name="md_theme_surfaceDim">#0B0E17</color>
+    <color name="md_theme_surfaceBright">#1C2337</color>
+    <color name="md_theme_surfaceContainerLowest">#07090F</color>
+    <color name="md_theme_surfaceContainerLow">#0E121E</color>
+    <color name="md_theme_surfaceContainer">#141927</color>
+    <color name="md_theme_surfaceContainerHigh">#1A2133</color>
+    <color name="md_theme_surfaceContainerHighest">#222B42</color>
+</resources>
+
